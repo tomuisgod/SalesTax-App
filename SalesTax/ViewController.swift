@@ -2,24 +2,24 @@
 //  ViewController.swift
 //  SalesTax
 //
-//  Created by Tomáš Lovrant on 19/12/2020.
+//  Created by tomu on 19/12/2020.
 //
 
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var priceTxt:
-        UITextField!
+    @IBOutlet weak var priceTxt: UITextField!
+    
     @IBOutlet weak var salesTaxTxt:
         UITextField!
     @IBOutlet weak var totalPriceLbl:
         UILabel!
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
-        totalPriceLbl.text = ""
+        totalPriceLbl.text = "Sales Tax Calculator"
     }
-    @IBAction func calcTotal(_ sender: Any) {
+    @IBAction func calcTotal( sender: Any) {
         let price = Double(priceTxt.text!)!
         let salesTax = Double(salesTaxTxt.text!)!
         
